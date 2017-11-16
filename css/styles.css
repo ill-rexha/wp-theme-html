@@ -1,0 +1,1104 @@
+/*
+Theme Name: Yoshiki Miura
+Author: Yoshiki Miura
+Description:
+Version: 1.0
+*/
+/* CSSリセット */
+/* this is 2017-08-08 wp-final css file  copied from cloud9 2017-08-08  cssffiles*/
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,
+pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,
+strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,
+caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,
+figure,footer,header,hgroup,menu,nav,section,summary,time,mark,
+audio,video{margin:0;padding:0!important;border:0;outline:0;font-size:100%;
+vertical-align:baseline;background:transparent;font-weight:normal;}
+body{line-height:1}article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section{display:block}
+ul,li{list-style:none}blockquote,q{quotes:none}blockquote:before,
+blockquote:after,q:before,q:after{content:none}a{margin:0;padding:0;
+font-size:100%;vertical-align:baseline;background:transparent}
+del{text-decoration:line-through}abbr[title],dfn[title]
+{border-bottom:1px dotted;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;
+margin:1em 0;padding:0}input,select{vertical-align:middle}
+a{text-decoration:none!important;}
+
+/* base
+==================================================================================================
+ */
+  /* heightで全体を指定するため*/
+html{
+	height: 100%;
+}
+
+body{
+	width: 100%;
+	height: 100%;
+	font-size: 16px;
+	background-color:rgba(255,255,255,0.8);
+	font-family: 'Oxygen', sans-serif;
+}
+
+.clearfix:after,.clearfix:before{
+	content: "";
+	clear: both;
+	display: block;
+}
+
+/* header
+==================================================================================================
+ */
+header{
+	width: 100%;
+}
+
+ /* fullpage.js
+==================================================================================================
+ */
+
+
+ /* nav(navigator)
+==================================================================================================
+ */
+
+nav{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	display: block;
+	/*これが入ると.main-pageの下が潜り込むので一度解除*/
+	/*position: absolute;*/
+	background-color: #2d2d2d;
+	z-index:3;
+}
+
+nav ul{
+	width: 600px;
+	height: 100%;
+	display: block;
+	margin: 0 auto;
+}
+
+nav li{
+	width: 120px;
+	height: inherit;
+	display: block;
+	float: left;
+}
+
+nav li a{
+	width: inherit;
+	height: inherit;
+	display: block;
+	color: #FF5917;
+	transition: background-color 0.5s,color 0.5s;
+	text-transform: uppercase;
+	font-weight: 800;
+	letter-spacing: 1px;
+	text-align: center;
+	font-size: 20px;
+
+}
+
+nav li a:hover{
+	background-color: #ff5917;
+	color: #2d2d2d;
+}
+
+.sticky{
+	position: fixed!important;
+	top: 0;
+}
+
+ /* <main>
+}
+==================================================================================================
+ */
+
+ .page-main{
+ 	width: 100%;
+ }
+
+
+
+ /* aside
+==================================================================================================
+ */
+aside{
+	width: 300px;
+	height: 100%;
+	background-color: #ff5917;
+	position: fixed;
+	top: 0;
+	left: -300px;
+	z-index: 999;
+
+}
+
+
+aside .logo{
+	display: block;
+	height: 150px;
+	line-height:150px;
+	font-size: 120px;
+	width: 100%;
+	display: block;
+}
+
+aside .logo a{
+	font-family: 'Cabin', sans-serif;
+	width:100%;
+	height: 100%;
+	display: block;
+	text-align: center;
+	font-weight: 400;
+	/*ロゴが少ない場合*/
+	/*font-size: 50px;*/
+	font-size: 80px;
+	color: #2d2d2d;
+	transition: background-color 0.5s,color 0.5s;
+}
+
+aside .logo a:hover{
+	background-color:#2d2d2d;
+	color: #ff5917;
+}
+
+aside ul{
+	width: 100%;
+	position: absolute;
+	border-top: 3px solid #2d2d2d;
+}
+
+aside li{
+	width: 100%;
+	height: 45px;
+	line-height: 45px;
+	border-bottom: 3px solid #2d2d2d;
+	display: block;
+}
+
+aside li a{
+	height: 100%;
+	width: 100%;
+	display:inline-block;
+	color: #2d2d2d;
+	transition: background-color 0.4s,color 0.3s;
+	text-transform: uppercase;
+	font-weight: 800;
+	letter-spacing: 1px;
+	text-align: center;
+	font-size: 20px;
+}
+
+aside li a:hover{
+	background-color:#2d2d2d;
+	color: #ff5917;
+}
+
+/* ハンバーガーアイコン */
+aside .humb-box{
+	height: 50px;
+	line-height: 50px;
+	width: 50px;
+	background-color: #2d2d2d;
+	/*親要素asideをアニメーションの際に動かすので、absolute*/
+	position: absolute;
+	top: 0;
+	left: 300px;
+
+}
+
+aside .humb {
+	height: inherit;
+	width: inherit;
+	position: absolute;
+}
+
+aside .humb span{
+	position: absolute;
+	width: 40px;
+	height: 5px;
+	background-color: white;
+	border-radius: 6px;
+	display: block;
+	margin: 10px 5px;
+}
+
+ .humb span:nth-child(1){
+	top: 0;
+}
+aside .humb span:nth-child(2){
+	top: 13px;
+}
+aside .humb span:nth-child(3){
+	bottom: 0;
+}
+
+/* スライドのアニメーション用色
+==================================================================================================
+ */
+
+ .window-shadow{
+ 	width: 100%;
+ 	height: 100%;
+ 	background-color: rgba(0,0,0,0.6);
+ 	position: fixed;
+ 	top: 0;
+ 	display: block;
+ 	z-index: 3;
+ 	transition-property: background-color;
+    transition-duration:1s;
+    transition-timing-function:ease-in-out;
+ }
+
+ .window-shadow-else{
+ 	width: 100%;
+ 	height: 100%;
+ 	background-color:transparent;
+ 	position: fixed;
+ 	top: 0;
+ 	display: block;
+ 	z-index: 3;
+ 	transition-property: background-color;
+    transition-duration:1s;
+    transition-timing-function:ease-in-out;
+ }
+
+
+/* item
+==================================================================================================
+ */
+
+/* heightを指定すると幅がきついのでやらないこと。 */
+ .page-main .market{
+ 	display:flex;
+ 	flex-wrap: wrap;
+ 	box-sizing: border-box;
+ 	border-top:3px solid rgba(102,102,102, 0.6);
+ 	border-left:3px solid rgba(102,102,102, 0.6);
+ }
+
+ .market .item{
+ 	height:50vh;
+ 	display:flex;
+ 	background-color:rgba(255,255,255,1.0);
+ 	border-right:3px solid rgba(102,102,102, 0.6);
+ 	border-bottom:3px solid rgba(102,102,102, 0.6);
+ 	box-sizing: border-box;
+ 	position: relative;
+ 	/* imgがscaleした際にはみ出さないようにするため */
+ 	overflow: hidden;
+ 	justify-content:center;
+ 	align-items: center;
+ }
+
+
+.market .item strong{
+	line-height: 80px;
+	height: 80px;
+	font-size: 60px;
+	font-weight: bold;
+	color:rgb(45,45,45);
+	text-align: center;
+	display: block;
+	transition: color 0.3s;
+}
+
+.market .item:hover strong{
+	color:#FF5917;
+}
+
+.market .item img{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	transition: transform 1s;
+	z-index: 0;
+
+}
+
+.market .item img:hover{
+	transform: scale(1.1, 1.1);
+	overflow: hidden;
+}
+.market .item .item-wrapper{
+	color: rgba(45,45,45,1.0);
+	/* padding-top: 50%;
+	padding-bottom: 22px;
+ */	z-index: 1;
+	background-color: rgba(233,233,233,0.6);
+	transition: opacity 0.5s ;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	justify-content:center;
+ 	align-items: center;
+	flex-direction: column;
+}
+
+.market .item .item-wrapper:hover{
+	opacity: 1;
+}
+
+.market .item .item-wrapper h3{
+	line-height: 30px;
+	height: 30px;
+	font-size: 30px;
+	width: 70%;
+	display: block;
+	font-weight: 600;
+	letter-spacing: 2px;
+	color: rgba(45,45,45,1.0);
+	text-align: center;
+	transition: color 0.3s;
+	text-transform: uppercase;
+}
+
+
+.market .item .item-wrapper p{
+	line-height: 21px;
+	height: 21px;
+	font-size: 21px;
+	font-weight: 600;
+	letter-spacing: 2px;
+	width: 70%;
+	color: rgba(45,45,45,1.0);
+	text-align: center;
+	padding-top: 20px;
+	transition: color 0.3s;
+}
+.market .item .item-wrapper h3:hover{
+	color:#FF5917;
+}
+
+
+/* <news>
+==================================================================================================
+ */
+/* news ==base==
+==================================================================================================
+ */
+ .page-main .news-wrapper{
+ 	font-family: 'Cabin', sans-serif;
+ 	display: block;
+	flex: 1;
+	margin: 0;
+	box-sizing: border-box;
+	/*border-top:3px solid rgba(102,102,102, 0.6);*/
+	border-left:3px solid rgba(102,102,102, 0.6);
+ }
+
+
+
+/* news ==rightside setting==
+==================================================================================================
+ */
+.infos .news-wrapper .infomations{
+	height: 50vh;
+	display:block;
+	/*wrapperを中央揃えにするため absoluteは親要素がstatic以外じゃないと指定できない*/
+	position:relative;
+	overflow: hidden;
+	top: 0;
+}
+
+.infomations img{
+	width:100%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	left: 0;
+}
+
+.first{
+	box-sizing: border-box;
+	border-bottom:3px solid rgba(102,102,102, 0.6);
+	border-right:3px solid rgba(102,102,102, 0.6);
+}
+/* 一番上のタイトル */
+.first .the_title{
+	height: 100%;
+	width: 100%;
+	line-height:100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 150px;
+	font-weight: 700;
+	letter-spacing: 8px;
+	color: rgba(45,45,45,0.9);
+	transition: color 0.3s;
+}
+
+.first .the_title:hover{
+	color: #ff5917;
+}
+
+
+
+/* .wrapperを全体に広げて、はいけいを動かす。wrapperが掛かった状態だとimgにhoverをかけた際に文字の部分だけhoverしないため。 */
+
+.infomations .wrapper{
+	display:block;
+	/*wrapperを中央揃えにするためのabsolute*/
+	height: 100%;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding-top:11%;
+	padding-left: 15%;
+	padding-bottom:13%;
+	padding-right: 15%;
+	height: 100%;
+	color:white;
+	z-index:0;
+	background-color: rgba(22,22,22,0.43);
+	box-sizing: border-box;
+	border-bottom:3px solid rgba(102,102,102, 0.6);
+	border-right:3px solid rgba(102,102,102, 0.6);
+	transition: background-color 0.5s;
+
+}
+
+.infomations .wrapper:hover{
+	background-color: rgba(22,22,22,0.8);
+}
+
+ .wrapper .info-title {
+	display:block;
+	height:80px;
+	line-height:40px;
+	font-size:40px;
+	font-weight:bold;
+	width:100%;
+	letter-spacing:4px;
+	margin-bottom:10px;
+}
+
+.wrapper .mdy,.wrapper .author{
+	width:100%;
+	font-size:15px;
+	line-height:15px;
+	font-weight:200;
+	letter-spacing:3px;
+	text-align: center;
+}
+.wrapper .mdy:before{
+	content:"Date : on ";
+}
+.wrapper .author:before{
+	content:"Author : by ";
+}
+/*inline-blockの左側に余白を付ける*/
+.wrapper .author{
+	margin-left:20px;
+}
+
+.wrapper p {
+	margin-top:15px;
+	letter-spacing:1.5px;
+	font-family: 'Cabin', sans-serif;
+	font-size: 17px;
+	line-height: 17px;
+}
+
+
+/* css for【page.php】【contact.html】and【blog-description.html】files
+==================================================================================================
+ */
+.blog-description{
+	width: 100%;
+	border-top: 3px solid rgba(45,45,45,0.9);
+	margin-top: 30px;
+}
+
+.all-layouts{
+	/* font from<link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet" /> */
+	font-family: "Sawarabi Mincho";
+	width: 70%;
+	display: block;
+	margin: 0 auto;
+	font-family: 'Cabin', sans-serif;
+	top: 0;
+	color: rgba(45,45,45);
+}
+.all-layouts .blog-titles{
+	margin: 30px 0;
+}
+
+.all-layouts h1{
+	line-height: 55px;
+	font-size: 55px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	display: block;
+	text-align: center;
+}
+.all-layouts p {
+	margin-top:5px;
+	letter-spacing:2px;
+	font-size: 19px;
+	line-height: 23px;
+	font-weight: 600;
+	margin-bottom: 50px;
+}
+
+.all-layouts a{
+	margin-top:5px;
+	letter-spacing:2px;
+	font-size: 19px;
+	line-height: 25px;
+	font-weight: 600;
+	color: #ff5917;
+	box-sizing: border-box;
+
+}
+
+.all-layouts a:hover{
+	border-bottom: 2px solid rgb(45,45,45);
+}
+
+.all-layouts img{
+	width: auto;
+	height:auto;
+	max-width: 100%;
+	max-height: 100%;
+	border: 3px solid rgba(45,45,45,0.8)l
+}
+
+.all-layouts .mdy,.all-layouts .author{
+	width:100%;
+	font-size:15px;
+	line-height:18px;
+	font-weight:700;
+	letter-spacing:3px;
+	text-align: center;
+	margin-top: 20px;
+}
+.all-layouts .mdy:before{
+	content:"Date : on ";
+}
+.all-layouts .author:before{
+	content:"Author : by ";
+}
+/*inline-blockの左側に余白を付ける*/
+.all-layouts .author{
+	margin-left:20px;
+}
+
+
+/* css for item-description ,this page suggest more infomation of items.
+==================================================================================================
+ */
+
+.page-main .item-description{
+	width:90%;
+	display: block;
+	margin: 0 auto;
+	padding: 0;
+	font-family: "Sawarabi Mincho";
+	font-family: 'Cabin', sans-serif;
+}
+
+/*added margin to make space top and bottom of slider-pro*/
+/*thumbnailpointer color changed under 216line .slider-pro.css file*/
+#slider1 {
+	margin-top: 100px;
+}
+
+.sp-thumbnails{
+	margin-bottom: 20px;
+}
+
+
+.item-description .item-description-wrapper{
+	width: 100%;
+}
+
+/* left side item size and name description  */
+.item-description-wrapper .left-item-description{
+	width: 50%;
+	display: block;
+	float: left;
+	/* ％で指定すると、flexでright-item-descriptionが長くなったときに大きくなるので数字で指定。 */
+	height: 500px;
+	background-color: rgba(255,255,255,0.9);
+	box-sizing: border-box;
+	border-top: 3px solid rgba(102,102,120,0.9);
+	border-left: 3px solid rgba(102,102,120,0.9);
+
+}
+
+.left-item-description .cart, .left-item-description ul{
+	width: 100%;
+	letter-spacing: 2px;
+	text-align: center;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+}
+
+.left-item-description .cart{
+	height: 25%;
+	width: 100%;
+	border-bottom: 3px solid rgba(102,102,120,0.9);
+	display: flex;
+}
+.left-item-description ul{
+	height: 75%;
+	width: 100%;
+	display: flex;
+}
+
+.left-item-description li{
+	height: 25%;
+	width: 100%;
+	border-bottom: 3px solid rgba(102,102,120,0.9);
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	font-size: 20px;
+	font-weight: bold;
+}
+.left-item-description li:last-child{
+	border-bottom:none;
+}
+
+
+.item-name-description:before{
+	content: "Product name : "
+}
+.item-price-description:before{
+	content: "Price : "
+}
+.item-size-description:before{
+	content: "Size : "
+}
+
+.item-material-description:before{
+	content: "Material : "
+}
+
+
+.item-description-wrapper .right-item-description{
+	width: 50%;
+	display: block;
+	float: right;
+	height: 500px;
+	background-color: rgba(255,255,255,0.9);
+	border:3px solid rgba(102,102,120,0.9);
+	box-sizing: border-box;
+	border-bottom:none;
+}
+.item-description-wrapper .right-item-description figcaption{
+	width: 90%;
+	display: block;
+	font-weight: bold;
+	margin:0 auto;
+}
+
+.item-description-wrapper .right-item-description figcaption h3{
+	font-size:40px;
+	font-weight: 400;
+	line-height: 40px;
+	text-align:center;
+	margin-top:40px;
+	margin-bottom: 40px;
+	font-weight: bold;
+	letter-spacing: 4px;
+	color:white;
+	background-color: black;
+	display:block;
+}
+
+.item-description-wrapper .right-item-description p{
+	font-size: 19px;
+	line-height: 23px;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+
+
+
+
+/* </main>
+==================================================================================================
+ */
+
+
+/* <footer>
+==================================================================================================
+ */
+footer{
+	/* height: 300px; */
+	background-color: #2d2d2d;
+	display: block;
+	font-family: 'Cabin', sans-serif;
+
+}
+
+.footer-dscr,.footer-bottom{
+
+	display: block;
+
+}
+
+.footer-common{
+	display: block;
+	font-size: 14px;
+	line-height: 14px;
+	letter-spacing: 2px;
+}
+/* ↑↑↑base of footer↑↑↑
+==================================================================================================
+ */
+ .footer-dscr{
+	height: 200px;
+}
+
+ .footer-bottom {
+ 	height: 200px;
+	padding-top: 10px;
+	border-top: 3px solid rgba(255,255,255,0.1);
+}
+
+
+ .copyright{
+	color: #666;
+	float: left;
+	text-transform: capitalize;
+}
+
+.agreement {
+	float: right;
+
+}
+
+.agreement li{
+	float: left!important;
+	display: inline-block;
+	padding-left: 20px!important;
+}
+
+.copyright a,.agreement a{
+	/*日本語の場合、このサイズが合う*/
+	/*font-size: 11.5px;*/
+	/*英語の場合このサイズ*/
+	font-size: 13px;
+	color: #666;
+	transition:color 0.3s;
+}
+.copyright p:hover a ,.agreement a:hover {
+	color: #ff5917;
+}
+
+/* </footer>
+==================================================================================================
+ */
+
+/* contact form 7
+==================================================================================================
+ */
+
+ .asterisk{
+ 	margin: 0 0 0 0.2em;
+	color: #f5637a;
+ }
+
+.wpcf7 {
+	background:#fafafa;
+	border:1px solid #ddd;
+	padding:0px; -moz-border-radius:10px;
+	-khtml-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px; margin:0 0 30px 0;
+	}
+.wpcf7 p {
+ 	padding:20px 20px 0;
+ 	margin:0;
+ 	color: rgba(45,45,45,0.9);
+ 	font-size:15px;
+ 	margin-top: 15px;
+	margin-left: 10px;
+ 	}
+.wpcf7 input, .wpcf7 textarea {
+	border:1px solid #ccc;
+	padding:8px;
+	font-size:20px;
+	font-weight: 400;
+	}
+.wpcf7 textarea {
+	width:97.5%;
+	height:300px;
+	}
+.wpcf7 input.wpcf7-submit {
+   cursor:pointer; color:#fff;
+   font-weight:bold;
+   font-size:14px;
+   width:200px;
+   height:45px;
+   margin:0 auto;
+   display:block;
+   -moz-border-radius:5px;
+   -khtml-border-radius:5px;
+   -webkit-border-radius:5px;
+   border-radius:5px;
+   background:#2d2d2d;
+	}
+
+	.wpcf7 input[type="text"],.wpcf7 input[type="email"],span{
+		width:90%!important;
+	}
+
+.wpcf7 input.wpcf7-submit{
+	transition: background-color 0.3s;
+}
+
+.wpcf7 input.wpcf7-submit:hover {
+	background:#FF5917;
+}
+.wpcf7 input.wpcf7-submit:active { box-shadow:none; bottom:-2px; position:relative; }
+.wpcf7 input:focus, .wpcf7 textarea:focus { border:1px solid #009de1; }
+.wpcf7-captchac { border:1px solid #ccc; }
+
+/* 必須赤色表示 */
+.wpcf7 .required { color: #f00;}
+/* 任意緑色表示 */
+.wpcf7 .any{ color: #080;}
+
+/* スマホ対応
+==================================================================================================
+ */
+
+@media screen and (max-width: 767px)
+{
+	aside .humb span{
+		margin: 10px 2px;
+	}
+	/* infomations */
+	.first .the_title{
+		font-size: 100px;
+	}
+
+	/* descriptionもろもろ */
+	.blog-description{
+		border-top: none;
+	}
+	.all-layouts {
+		width: 95%;
+	}
+
+	.all-layouts h1{
+		font-size: 30px;
+	}
+
+	.all-layouts img{
+		margin-bottom: 30px;
+	}
+
+	.all-layouts .mdy ,.all-layouts .author{
+		font-size: 11px;
+	}
+
+	.all-layouts p{
+		letter-spacing: 1px;
+		font-size: 11px;
+	}
+
+	/* footer */
+	.copyright,.copyright a,.copyright p,.agreement,.agreement li,.agreement li a{
+		height:12vh;
+		line-height: 100%;
+		margin: 0;
+	}
+
+
+	.copyright,.copyright a,.copyright p{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.agreement,.agreement li,.agreement li a{
+		background-color: #2d2d2d;
+	}
+
+	.copyright{
+		background-color: rgba(255,255,255,0.8)
+	}
+
+	.copyright p{
+		width: 100%;
+		height: 100%;
+		font-weight: 500;
+		font-size: 15px!important;
+	}
+
+	.copyright a{
+		font-weight: 500;
+		font-size: 20px;
+		padding-right: 4px;
+		letter-spacing: 1.5px;
+	}
+
+	.agreement li,.agreement li a {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 18px;
+	}
+
+	.agreement li{
+		padding-left: 0px!important;
+		border-bottom:3px solid rgba(255,255,255,0.1);
+	}
+
+	.agreement li a {
+		font-weight: 500;
+	}
+
+}
+
+@media screen and (max-width: 630px)
+{
+		/* itemのレイアウト */
+		.market .item{
+	 	height:33vh;
+	 	}
+
+	 	.market .item strong{
+	 		font-size: 45px;
+	 	}
+
+	 	/* item-decriptionのレイアウト */
+	 	.item-description{
+	 		width: 100%!important;
+	 	}
+	 	.item-description-wrapper .right-item-description,
+	 	.item-description-wrapper .left-item-description{
+			width: 100%;
+			height: auto;
+	 	}
+		.item-description-wrapper .right-item-description figcaption h3{
+			font-size: 25px;
+		}
+		.item-description-wrapper .right-item-description figcaption p{
+			font-size: 15px;
+		}
+
+		.item-description-wrapper .left-item-description{
+			height: auto;
+		}
+		.item-description-wrapper .left-item-description ul{
+			height:50vh;
+		border-right: 3px solid rgba(102,102,120,0.9);
+		}
+
+		.item-description-wrapper .left-item-description li{
+			font-size: 15px;
+			height: 33.3vh;
+		}
+
+
+		/* infomation(newsの)レイアウト調整 */
+		.infomations .wrapper {
+			padding-bottom: 0%;
+		}
+
+		.wrapper .info-title {
+		display:block;
+		height:25px;
+		line-height:25px;
+		font-size:25px;
+		font-weight:bold;
+		width:100%;
+		letter-spacing:4px;
+		margin-bottom:10px;
+		margin-top: 15%;
+		}
+
+		.wrapper {
+			padding-right:0%!important;
+		}
+
+	/* 著者と */
+	.wrapper .mdy,.wrapper .author{
+		font-size:15px;
+		line-height:15px;
+		font-weight:200;
+		letter-spacing:3px;
+		text-align: center;
+		display: block;
+		margin-left: 0px;
+		text-align: left;
+	}
+	.wrapper .mdy:before{
+		content:"Date : on ";
+	}
+	.wrapper .author:before{
+		content:"Author : by ";
+	}
+	/*inline-blockの左側に余白を付ける*/
+
+	.wrapper .mdy{
+		margin-top: 60px;
+	}
+	.wrapper .author{
+		margin-top: 25px;
+	}
+
+	.wrapper p {
+		margin-top:0px;
+		font-size: 0px;
+		line-height: 0px;
+	}
+}
+/* iphone5から接続した際のレイアウト調整 */
+@media screen and (max-height: 430px)
+{
+	.market .item{
+		height:100vh;
+	}
+	.infomations{
+		height: 100vh!important;
+	}
+
+	/* レイアウトの調整 */
+	.infomations .wrapper {
+		padding-top: 20%;
+	}
+
+	.wrapper .mdy{
+		margin-top: 22px;
+	}
+	.wrapper .author{
+		margin-top: 22px;
+	}
+
+	.footer-bottom{
+		border-top: none;
+	}
+}
+@media screen and (max-height: 330px)
+{
+	.wrapper{
+		padding-top: 10%!important;
+		padding-right: 15%!important;
+
+	}
+
+	.wrapper .info-title{
+		margin-bottom: 20px;
+	}
+}
